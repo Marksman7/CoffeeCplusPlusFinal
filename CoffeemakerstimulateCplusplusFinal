@@ -1,0 +1,92 @@
+
+#include <iostream>
+#include <set>
+#include <string>
+
+int main()
+{
+    std::string number[5] = { "0", "1", "2", "3", "4" };
+
+    int Number[5] = { 0, 1, 2, 3, 4 };
+
+    std::string input = "";
+
+    std::cout << "How many cups of coffee would you liek to maek (1-4)" << std::endl;
+
+    std::cin >> input;
+
+    int coffee = -1;
+
+    int beans = 0;
+
+    int  bean = 15;
+
+    int grind = 0;
+
+    int degrees = 0;
+
+
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (input == number[i])
+        {
+            coffee = Number[i];
+
+        }
+    }
+
+    if (coffee > 0)
+    {
+            beans = coffee * 50;
+
+            std::cout << "Loading ";
+            std::cout << beans;
+            std::cout << " beans" << std::endl;
+    
+
+        for (int i = 0; i < (coffee * 2); i++)
+        {
+            grind = (bean * 100) / beans;
+
+            std::cout << grind;
+
+            std::cout << "% done Grinding" << std::endl;
+
+            bean = bean + 25;
+
+        }
+
+
+        std::cout << "Filling Water (";
+        std::cout << coffee;
+        std::cout << " cups)" << std::endl;
+        std::cout << "boiling water" << std::endl;
+
+        for (int q = 0; q < 13; q++)
+        {
+            degrees = q * 15;
+
+            std::cout << degrees;
+            std::cout << " degrees" << std::endl;
+        }
+
+        std::cout << "Making coffee (";
+        std::cout << coffee;
+        std::cout << " cups)" << std::endl;
+        std::cout << "thee coffee has been completed, sir/mam/it" << std::endl;
+    }
+
+
+
+    if (coffee == 0)
+    {
+        std::cout << "Ok, go away and let someone else do coffee if you don't want any" << std::endl;
+    }
+    else if (coffee == -1)
+    {
+        std::cout << "You broke the machine, No Coffee for you" << std::endl;
+
+    }
+
+}
